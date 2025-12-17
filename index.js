@@ -9,7 +9,7 @@ function search(event) {
   let searchInputElement = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = searchInputElement.value;
-  searchCity(searchInputElement);
+  searchCity(searchInputElement.value);
 }
 
 let searchForm = document.querySelector("#search-form");

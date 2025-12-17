@@ -7,7 +7,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+      <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <title>My weather application</title>
+  </head>
+  <body>
     <title>My weather application</title>
   </head>
   <body>
@@ -19,6 +23,7 @@
             placeholder="Enter a city.."
             required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -41,24 +46,9 @@
         </div>
       </main>
       <footer>
-        <p>
-          This project was coded by
-          <a href="https://github.com/seetalp1/seetalp1" target="_blank"
-            >Seetal Patel</a
-          >
-          and is on
-          <a
-            href="https://github.com/seetalp1/Weather-application-project"
-            target="_blank"
-          >
-            GitHub</a
-          >
-          and hosted on
-          <a href="https://weatherappseetalpatel.netlify.app/" target="_blank"
-            >Netlify</a
-          >
-        </p>
+        <p>This project was coded by Seetal Patel</p>
       </footer>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>

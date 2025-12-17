@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>My weather application</title>
   </head>
   <body>
-    <div>
+    <div class="weather-application">
       <header>
         <form id="search-form">
           <input
@@ -12,30 +19,29 @@
             placeholder="Enter a city.."
             required
             class="search-input"
-            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
-        </form id="search-form">
+        </form>
       </header>
       <main>
-        <div>
+        <div class="current-weather">
           <div>
-            <h1>Paris</h1>
+            <h1 class="current-city" id="current-city">Paris</h1>
             <p>
-              <span>Mon 1st</span>, moderate rain
+              <span id="current-date"></span> <span></span>, moderate rain
               <br />
               Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
             </p>
           </div>
-          <div>
-            <span>☀️</span
-            ><span>24</span
-            ><span>°C</span>
+          <div class="current-temperature">
+            <span class="current-temperature-icon">☀️</span
+            ><span class="current-temperature-value">24</span
+            ><span class="current-temperature-unit">°C</span>
           </div>
         </div>
       </main>
       <footer>
-        <p>This project was coded by <a href="https://github.com/seetalp1/seetalp1">Seetal Patel</a></p>
+        <p>This project was coded by Seetal Patel</p>
       </footer>
     </div>
   </body>

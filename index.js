@@ -1,9 +1,19 @@
+function searchCity(city) {
+  let apiKey = "aeee30f44oc8t5f407da27a74746b34b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  console.log(apiUrl);
+}
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = searchInputElement.value;
+  searchCity(searchInputElement);
 }
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -31,9 +41,6 @@ function formatDate(date) {
   let formattedDay = days[day];
   return `${formattedDay} ${hours}:${minutes}`;
 }
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
 
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();

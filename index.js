@@ -1,9 +1,11 @@
 function displayCityWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
+  temperatureElement.innerHTML = Math.round(temperature);
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(temperature);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.condition.description;
 }
 
 function searchCity(city) {

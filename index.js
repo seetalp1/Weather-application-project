@@ -17,7 +17,7 @@ function displayCityWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   dateTimeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" />`;
-  displayForecast(response.data.city);
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
